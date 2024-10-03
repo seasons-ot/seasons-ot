@@ -6,6 +6,13 @@
   .bg-page {
     background-color: var(--aw-color-bg-page);
   }
+  .bg-photo {
+    background-image: url('~/assets/images/seasons-ot-bg.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
   .bg-dark {
     background-color: var(--aw-color-bg-page-dark);
   }
@@ -35,6 +42,10 @@
 
   .btn-tertiary {
     @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
+  }
+
+  .btn-icon {
+    @apply btn text-[#ABB53A] border-[#ABB53A] p-0 h-16 w-16;
   }
 }
 
