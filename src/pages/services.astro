@@ -1,9 +1,6 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -15,210 +12,133 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Image',
+      src: '~/assets/images/about-us-header.png',
+      alt: 'People holding hands',
     }}
-  />
+  >
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem]'>Services</span>
+    </Fragment>
+  </Hero>
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
-    columns={3}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
-      },
-      {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'E-commerce',
-        description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
-      },
-      {
-        title: 'Blog',
-        description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
-      },
-      {
-        title: 'Business',
-        description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
-      },
-      {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
-      },
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
+  <!-- Occupational Therapy Assessment Widget **************** -->
 
   <Content
     isReversed
-    items={[
-      {
-        title: 'High-Quality Designs',
-        description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Customization Tools',
-        description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Pre-Designed Elements',
-        description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
-        icon: 'tabler:presentation',
-      },
-      {
-        title: 'Preview and Mockup Views',
-        description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
-        icon: 'tabler:carousel-horizontal',
-      },
-    ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
+      src: '~/assets/images/child-climbing-ladder.jpg',
+      alt: 'Child climbing ladder',
     }}
   >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
+        >Occupational Therapy Assessment
+      </span>
+    </Fragment>
+    <Fragment slot='content'>
+      <p class='text-left'>
+        A holistic and comprehensive assessment includes parent interviews and questionnaires, standardized assessments
+        and clinical observations of the child, and a written recommendations report.
+      </p><p>
+        The entire assessment will take <i>up to 2 hours</i>, consisting of assessment tasks and clinical observations
+        (90 minutes), then followed by a parent discussion about the assessment findings, goalsetting, and potential
+        treatment plan (30 minutes).
+      </p><p>
+        Key areas addressed: self-care skills, written output, fine motor skills, gross motor skills, primitive reflex
+        integration, visual perception, functional vision screening, sensory processing and modulation, play and
+        socioemotional skills, executive functioning.
+      </p>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- Occupational Therapy Treatment Widget **************** -->
 
   <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Time Savings',
-        description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
-        icon: 'tabler:clock',
-      },
-      {
-        title: 'Professional Appearance',
-        description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Cost-Efficiency',
-        description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
-        icon: 'tabler:coin',
-      },
-      {
-        title: 'Instant Download',
-        description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
-      },
-    ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
+      src: '~/assets/images/child-climbing-ladder.jpg',
+      alt: 'Child climbing ladder',
     }}
   >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
+        >Occupational Therapy Treatment
+      </span>
+    </Fragment>
+    <Fragment slot='content'>
+      <p class='text-left'>
+        Direct 1:1 OT sessions, with an OT or a supervised OTA (Occupational Therapy Assistant) in the child's home,
+        community or preschool/daycare setting.
+      </p><p>
+        Session frequency will depend on the child's need, progress, and carryover of recommendations into the child's
+        everyday life. Our treatments will often look like play, but embedded with therapeutic benefits of the
+        'just-right challenge' to motivate and support the child's development toward their goals.
+      </p>
     </Fragment>
   </Content>
 
-  <!-- Testimonials Widget *********** -->
+  <!-- Occupational Therapy Treatment Widget **************** -->
 
-  <Testimonials
-    title="Words from real customers"
-    testimonials={[
-      {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: 'Emily Kennedy',
-        job: 'Front-end developer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
-        },
-      },
-      {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
-        name: 'Sarah Hansen',
-        job: 'Photographer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sarah Hansen Image',
-        },
-      },
-      {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
-        name: 'Mark Wilkinson',
-        job: 'Small business owner',
-        image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
-        },
-      },
-    ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
+  <Content
+    isReversed
+    image={{
+      src: '~/assets/images/children-playing-jenga.jpg',
+      alt: 'Children playing jenga',
     }}
-  />
+  >
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
+        >Parent Coaching and Consultation
+      </span>
+    </Fragment>
+    <Fragment slot='content'>
+      <p class='text-left'>
+        Do you have burning questions or pain points about your child, or want to improve your relationship with your
+        child? Is your child struggling with a new skill and becoming avoidant or frustrated when you try to teach them?
+      </p><p>
+        Gain an even better understanding of your child to help them thrive with Parent Coaching and Consultation -
+        where your questions can be addressed with insightful conversations, relevant education on your child's
+        development, practical therapeutic strategies and customized action plans.
+      </p>
+      <p>Examples of topics during Parent Coaching and Consultation:</p>
+      <ul>
+        <li>Anxiety/Stress management</li>
+        <li>Sleep hygiene</li>
+        <li>Toilet training</li>
+        <li>Picky eating</li>
+        <li>Family routines and transitions</li>
+        <li>Self-regulation and Co-regulation</li>
+        <li>Parent-child relationship</li>
+      </ul>
+    </Fragment>
+  </Content>
 
-  <!-- CallToAction Widget *********** -->
+  <!-- service delivery
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
-      },
-    ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
-  />
+ Widget ******************* -->
+
+  <Hero
+    image={{
+      src: '~/assets/images/child-coloring.jpg',
+      alt: 'Child coloring',
+    }}
+  >
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem]'>service delivery</span><br />
+    </Fragment>
+
+    <Fragment slot='content'>
+      <div class='text-left max-w-3xl m-auto'>
+        <p class='text-left'>
+          <strong>In-person services</strong> are offered via community visits (at the child/youth's home, school/daycare,
+          and local playground/parks) to families living in the Greater Vancouver region.
+          <br /><strong>Teletherapy (online)</strong> is offered through a secure video or voice calling platform (based
+          on client preference).
+        </p><p>
+          Online OT can be just as effective and engaging as in-person sessions and helps to reduce travel costs as
+          well. Parent support for 1:1 online OT is recommended as a helping hand in session.
+        </p>
+      </div>
+    </Fragment>
+  </Hero>
 </Layout>
