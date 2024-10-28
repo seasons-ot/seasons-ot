@@ -1,6 +1,7 @@
 ---
 import Content from '~/components/widgets/Content.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -123,7 +124,7 @@ const metadata = {
       alt: 'Child coloring',
     }}
   >
-    <Fragment slot='title'>
+    <!-- <Fragment slot='title'>
       <span class='text-[#8B3324] uppercase tracking-[0.4rem]'>service delivery</span><br />
     </Fragment>
 
@@ -139,6 +140,27 @@ const metadata = {
           well. Parent support for 1:1 online OT is recommended as a helping hand in session.
         </p>
       </div>
-    </Fragment>
+    </Fragment> -->
   </Hero>
+
+  <HeroText textOnly>
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'>service delivery </span>
+    </Fragment>
+    <Fragment slot='content'>
+      <div class='text-left max-w-3xl m-auto'>
+        <p>
+          <strong>In-person services</strong> are offered via community visits (at the child/youth's home, school/daycare,
+          and local playground/parks) to families living in the Greater Vancouver region.
+        </p>
+        <p>
+          <strong>Teletherapy (online)</strong> is offered through a secure video or voice calling platform (based on client
+          preference).
+        </p><p>
+          Online OT can be just as effective and engaging as in-person sessions and helps to reduce travel costs as
+          well. Parent support for 1:1 online OT is recommended as a helping hand in session.
+        </p>
+      </div>
+    </Fragment>
+  </HeroText>
 </Layout>

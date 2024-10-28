@@ -25,6 +25,9 @@
   .text-muted {
     color: var(--aw-color-text-muted);
   }
+  p + p {
+    margin-top: 1rem;
+  }
 }
 
 @layer components {

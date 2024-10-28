@@ -1,9 +1,21 @@
 ---
 import { SITE } from 'astrowind:config';
+import Image from '~/components/common/Image.astro';
 ---
 
 <span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+  class='self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-[#543710] uppercase tracking-wider whitespace-nowrap flex justify-center items-center gap-1'
 >
-  🚀 {SITE?.name}
+  <Image
+    class='mx-auto rounded-md w-full inline'
+    style='object-fit: contain;'
+    widths={[400, 768, 1024, 2040]}
+    sizes='(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px'
+    loading='eager'
+    width={24}
+    height={24}
+    src={'~/assets/images/seasons-ot-logo.png'}
+    alt={'Seasons Occupational Therapy Logo'}
+  />
+  {SITE?.name}
 </span>

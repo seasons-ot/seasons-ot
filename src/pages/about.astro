@@ -1,12 +1,11 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import Content from '~/components/widgets/Content.astro';
+import Headline from '~/components/ui/Headline.astro';
+import Steps from '~/components/widgets/Steps.astro';
 
 const metadata = {
   title: 'About us',
@@ -84,243 +83,190 @@ const metadata = {
 
   <!-- Does my child need Occupational Therapy? ****************** -->
 
-  <HeroText textOnly>
+  <Features3
+    columns={3}
+    defaultIcon='tabler:point-filled'
+    items={[
+      {
+        title: 'self-help skills',
+      },
+      {
+        title: 'fine motor + gross motor skills',
+      },
+      {
+        title: 'printing + writing',
+      },
+      {
+        title: 'attention + self-regulation',
+      },
+      {
+        title: 'sensory processing',
+      },
+      {
+        title: 'socioemotional skills',
+      },
+      {
+        title: 'play skills',
+      },
+      {
+        title: 'organization + planning',
+      },
+      {
+        title: 'executive functioning',
+      },
+    ]}
+  >
     <Fragment slot='title'>
       <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
         >Does my child need Occupational Therapy?
+      </span></Fragment
+    >
+
+    <Fragment slot='subtitle'>
+      <div>
+        <span
+          >If your child is struggling in any of the following areas, or is having difficulty keeping up with their
+          same-aged peers, your child may benefit from OT services.
+        </span>
+      </div>
+      <div><span>What OTs can help with: </span></div>
+    </Fragment>
+  </Features3>
+
+  <Headline>
+    <Fragment slot='subtitle'>
+      <div>
+        <span>To note, your child does not need a diagnosis or a doctor referral to receive OT services. </span>
+      </div>
+    </Fragment>
+  </Headline>
+
+  <Hero
+    image={{
+      src: '~/assets/images/children-playing-with-blocks.jpg',
+      alt: 'Children playing with blocks',
+    }}
+  />
+
+  <HeroText textOnly>
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
+        >Our Practice Philosophy
       </span>
     </Fragment>
     <Fragment slot='content'>
-      <div class='text-left max-w-3xl m-auto'>
-        <p class='text-left'>
-          If your child is struggling in any of the following areas, or is having difficulty keeping up with their
-          same-aged peers, your child may benefit from OT services.
-        </p>
-        <p>What OTs can help with:</p>
-        <ul>
-          <li>self-help skills</li>
-          <li>fine motor + gross motor skills</li>
-          <li>printing + writing</li>
-          <li>attention + self-regulation</li>
-          <li>sensory processing</li>
-          <li>socioemotional skills</li>
-          <li>play skills</li>
-          <li>organization + planning</li>
-          <li>executive functioning</li>
-        </ul>
-        <p><i>To note, your child does not need a diagnosis or a doctor referral to receive OT services.</i></p>
-      </div>
+      <p class='text-left max-w-3xl m-auto'>
+        Our mission is to help children and youth thrive and become <b
+          >more coordinated, calm, connected, and confident</b
+        >.
+      </p>
+      <p class='text-left max-w-3xl m-auto'>
+        We do this in two ways:<br />
+        <b>1. Direct OT assessment and treatment</b><br />
+        <b>2. Parent coaching and consultation</b>
+      </p>
+      <p class='text-left max-w-3xl m-auto'>
+        We pride ourselves on using a family-centered, relationship and play-based approach to address your child's
+        individual OT goals. Learning through play has been proven to be most effective for children as it facilitates
+        engagement, curiosity, and experiential learning.
+      </p>
+      <p class='text-left max-w-3xl m-auto'>
+        Parent implementation of OT strategies is key to a child's progress and success. We also encourage our clients
+        to nurture a growth mindset (parents too) and collaborate with the family to create and achieve meaningful
+        goals.
+      </p>
     </Fragment>
   </HeroText>
 
-  <!-- Our Practice Philosophy
- ****************** -->
-
-  <Steps2
-    title='Our Practice Philosophy'
-    ,
-    subtitle='Our mission is to help children and youth thrive and become more coordinated, calm, connected, and confident.'
-    ,
-    items={[
-      {
-        title: 'Direct OT assessment and treatment',
-      },
-      {
-        title: 'Parent coaching and consultation',
-      },
-    ]}
+  <Hero
+    image={{
+      src: '~/assets/images/children-running.jpg',
+      alt: 'Children running up a hill',
+    }}
   />
 
-  <!-- Stats Widget ****************** -->
+  <!-- Hero Widget ******************* -->
 
-  <Stats
-    title='Statistics about us'
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  />
+  <HeroText textOnly>
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
+        >Meet our OT - Sharon Yeung (B.A, M.O.T, B.C. Reg. OT)
+      </span>
+    </Fragment>
+    <Fragment slot='content'>
+      <p class='text-left max-w-3xl m-auto'>
+        Sharon is a registered Occupational Therapist in British Columbia, Canada and a member of the RASP-list
+        (Registry of Autism Service Providers).
+      </p>
+      <p class='text-left max-w-3xl m-auto'>
+        With over 10 years of experience, Sharon is passionate about working with children and families. Within a
+        variety roles and settings, Sharon continually provides fun and effective research-based treatments and
+        collaboration with the child's healthcare and educational teams.
+      </p>
+      <p class='text-left max-w-3xl m-auto'>
+        With a breadth of pediatric experience from ages 2-18, Sharon has worked with children with Autism Spectrum
+        Disorder (ASD), Attention Deficit Hyperactivity Disorder (ADHD), Down’s Syndrome, Sensory Processing Disorder
+        (SPD), Developmental Coordination Disorder (DCD), Downs Syndrome, Cerebral Palsy (CP), other
+        physical/genetic/neurological disorders, developmental delays, and mental health conditions.
+      </p>
+      <p class='text-left max-w-3xl m-auto'>
+        In OT sessions, Sharon utilizes playful child-centered approaches along with developmental, sensory-motor,
+        cognitive-emotional, and behavioural evidence-based practice. Sharon also has a strong art background in
+        mindfulness, music education and movement practices (yoga, dance).
+      </p>
+      <p class='text-left max-w-3xl m-auto'>
+        Sharon is also multilingual and is conversational in Cantonese and Mandarin.
+      </p>
+      <p class='text-left max-w-3xl m-auto'>
+        During leisure time, Sharon is a nature lover and enjoys chasing the sun, hiking and camping, scuba diving,
+        gardening, and travelling. She loves both cats and dogs, tea and dark chocolate.
+      </p>
+    </Fragment>
+  </HeroText>
 
-  <!-- Features3 Widget ************** -->
+  <!-- Steps Widget ****************** -->
 
-  <Features3
-    title='Our templates'
-    subtitle='Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod.'
-    columns={3}
-    isBeforeContent={true}
+  <Steps
+    title='Training & Qualifications:'
     items={[
       {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+        title: 'Sensory Processing and Integration',
+        description: `<ul><li>Therapeutic Listening®</li><li>Building Blocks of Sensory Integration</li><li>Wilbarger Brushing Protocol®</li><li>Astronaut Training Program®</li><li>Sensory modulation approaches to mental health interventions for adults and adolescents</li></ul>`,
+        icon: 'tabler:package',
       },
       {
-        title: 'Interior Design',
+        title: 'Mental Health',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+        icon: 'tabler:letter-case',
       },
       {
-        title: 'Photography',
+        title: 'Handwriting',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+        icon: 'tabler:paint',
       },
       {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+        title: 'Rhythmic Movement Training International (RMTi) Level 1 & 2',
+        icon: 'tabler:check',
       },
       {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
+        title: 'DIR 101: An Introduction to DIR® and DIRFloortime®',
+        icon: 'tabler:check',
       },
       {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
+        title:
+          'Emotional Freedom Technique (EFT)/Acupoint Mediated Neural Change Technique for Trauma, Relief and Resiliency',
+        icon: 'tabler:check',
       },
       {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+        title: 'Trauma-informed Care and Cultural Safety (Cultural Security, Clinical Yarning)',
+        icon: 'tabler:check',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
     }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title='Our values'
-    subtitle='Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus.'
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title='Achievements'
-    subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla.'
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title='Our locations'
-    tagline='Find us'
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title='Technical Support'
-    tagline='Contact us'
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
-      },
-    ]}
   />
 </Layout>

@@ -15,15 +15,11 @@ export const headerData = {
       href: '/services',
     },
     {
-      text: 'Testimontials',
-      href: '#',
-    },
-    {
-      text: 'Connect',
-      href: '#',
+      text: 'Testimonials',
+      href: '/client-love',
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Connect', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
 
 export const footerData = {

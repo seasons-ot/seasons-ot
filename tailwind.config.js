@@ -16,7 +16,7 @@ module.exports = {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
         serif: ['var(--aw-font-serif, ui-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
-        special: ['Amatic SC', ...defaultTheme.fontFamily.sans],
+        special: ['Josefin Slab', ...defaultTheme.fontFamily.serif],
       },
     },
   },
