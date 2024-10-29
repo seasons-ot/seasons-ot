@@ -26,18 +26,18 @@ const { language, textDirection } = I18N;
 ---
 
 <!doctype html>
-<html lang={language} dir={textDirection} class='2xl:text-[20px]'>
+<html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>
     <CommonMeta />
     <Favicons />
 
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href='https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'
-      rel='stylesheet'
+      href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
     />
-    <link href='https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet" />
 
     <CustomStyles />
     <ApplyColorMode />
@@ -46,10 +46,10 @@ const { language, textDirection } = I18N;
     <Analytics />
 
     <!-- Comment the line below to disable View Transitions -->
-    <ViewTransitions fallback='swap' />
+    <ViewTransitions fallback="swap" />
   </head>
 
-  <body class='antialiased text-default bg-page tracking-tight bg-photo'>
+  <body class="antialiased text-default bg-page tracking-tight bg-photo">
     <slot />
 
     <BasicScripts />
