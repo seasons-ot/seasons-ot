@@ -19,7 +19,7 @@ export const headerData = {
       href: '/client-love',
     },
   ],
-  actions: [{ text: 'Connect', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Connect', href: '/contact' }],
 };
 
 export const footerData = {

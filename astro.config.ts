@@ -33,6 +33,8 @@ export default defineConfig({
     icon({
       include: {
         tabler: ['*'],
+        'grommet-icons': ['assist-listening'],
+        ri: ['mental-health-line'],
         'flat-color-icons': [
           'template',
           'gallery',
