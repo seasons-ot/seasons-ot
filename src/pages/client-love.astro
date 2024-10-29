@@ -1,5 +1,5 @@
 ---
-import Hero from '~/components/widgets/Hero.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -10,11 +10,16 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-  <Hero>
-    <Fragment slot="title">
-      <span class="text-[#8B3324] uppercase tracking-[0.4rem]">Testimonials</span><br />
+  <HeroText textOnly>
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.35rem] text-4xl md:text-6xl'>Testimonials</span><br />
     </Fragment>
-  </Hero>
+  </HeroText>
+  <!-- <Hero>
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem]'>Testimonials</span><br />
+    </Fragment>
+  </Hero> -->
 
   <!-- Testimonials Widget *********** -->
 
