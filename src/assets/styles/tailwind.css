@@ -7,11 +7,17 @@
     background-color: var(--aw-color-bg-page);
   }
   .bg-photo {
-    background-image: url('~/assets/images/seasons-ot-bg.jpg');
-    background-position: top;
+    background-image: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)), url("https://seasonsot.com/_astro/seasons-ot-bg.Bs8nPmQ2.jpg");
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+  }
+  @media screen(lg) {
+    .bg-photo {
+      background-position: top;
+      background-image: url('~/assets/images/seasons-ot-bg.jpg');
+    }
   }
   .bg-dark {
     background-color: var(--aw-color-bg-page-dark);
@@ -29,6 +35,8 @@
     margin-top: 1rem;
   }
 }
+
+
 
 @layer components {
   .btn {
