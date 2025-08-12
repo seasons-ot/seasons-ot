@@ -1,0 +1,234 @@
+---
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import Headline from '~/components/ui/Headline.astro';
+import Steps from '~/components/widgets/Steps.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    image={{
+      src: '~/assets/images/about-us-header.png',
+      alt: 'People holding hands',
+    }}
+  >
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem]'>Our Team</span><br />
+    </Fragment>
+  </Hero>
+
+  <Content
+    id='sharon-yeung'
+    contentWidth='3/5'
+    columns={3}
+    image={{
+      src: '~/assets/images/our-team-sharon.jpg',
+      loading: 'lazy',
+      alt: 'Sharon Yeung, B.A, M.O.T, B.C. Reg. OT',
+      height: 700,
+    }}
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot='content' class='md:basis:2/3'>
+      <h2 class='text-[#8B3324] font-bold uppercase tracking-[0.4rem] font-special text-3xl md:text4xl mb-2'>
+        <span>Sharon Yeung,</span><br />
+        <span class='font-medium tracking-normal text-xl md:text2xl'>B.A, M.O.T, B.C. Reg. OT</span>
+      </h2>
+      <span
+        class='text-[#8B3324] font-medium uppercase tracking-[0.4rem] font-special text-xl md:text2xl inline-block mb-3'
+        >Occupational Therapist & Clinic Owner</span
+      >
+      <p>
+        Sharon is a Registered Occupational Therapist, member of the RASP (Registry of Autism Service Providers), and
+        Clinical Instructor in the Department of Occupational Science & Occupational Therapy at the University of
+        British Columbia. She earned her Master’s degree in Occupational Therapy from the University of Sydney,
+        Australia.
+      </p>
+
+      <p>
+        With over a decade of pediatric experience, Sharon is passionate about helping children and families thrive. She
+        has worked in diverse roles and settings, delivering fun, engaging, and evidence-based interventions while
+        collaborating closely with each child’s healthcare and educational teams.
+      </p>
+
+      <p>
+        Sharon supports children and youth (ages 2–18) with Autism Spectrum Disorder (ASD), Attention Deficit
+        Hyperactivity Disorder (ADHD), Down Syndrome, Sensory Processing Disorder (SPD), Developmental Coordination
+        Disorder (DCD), Cerebral Palsy (CP), and other physical, genetic, neurological, developmental, and mental health
+        conditions.
+      </p>
+      <p>
+        Her approach is playful, child-centred, and grounded in evidence-based practice that incorporates developmental,
+        sensory-motor, cognitive, and social-emotional principles. She also draws on her background in visual arts,
+        mindfulness, music, and movement (including yoga and dance) to create meaningful and motivating therapy
+        experiences.
+      </p>
+      <p>
+        Fluent in English and conversational in Cantonese and Mandarin, Sharon values cultural connection in her work.
+        Outside the clinic, she’s often outdoors chasing the sun — hiking, camping, scuba diving, or gardening — and
+        loves travelling, tea, and dark chocolate.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title='Training & Qualifications:'
+    items={[
+      {
+        title: 'Sensory Processing and Integration',
+        description: `<ul><li>Therapeutic Listening®</li><li>Building Blocks of Sensory Integration</li><li>Wilbarger Brushing Protocol®</li><li>Astronaut Training Program®</li><li>Sensory modulation approaches to mental health interventions for adults and adolescents</li></ul>`,
+        icon: 'grommet-icons:assist-listening',
+      },
+      {
+        title: 'Mental Health',
+        description: `<ul><li>Anxiety Management for Children: Practical Strategies</li><li>Cognitive Behavioural Therapy (CBT): Level 1 for OT</li></ul>`,
+        icon: 'ri:mental-health-line',
+      },
+      {
+        title: 'Handwriting',
+        description: `<ul><li>Handwriting Without Tears®</li><li>Printing Like a Pro</li></ul>`,
+        icon: 'fluent-mdl2:handwriting',
+      },
+      {
+        title: 'Rhythmic Movement Training International (RMTi) Level 1 & 2',
+        icon: 'mdi:human-female-dance',
+      },
+      {
+        title: 'DIR 101: An Introduction to DIR® and DIRFloortime®',
+        icon: 'game-icons:relationship-bounds',
+      },
+      {
+        title:
+          'Emotional Freedom Technique (EFT)/Acupoint Mediated Neural Change Technique for Trauma, Relief and Resiliency',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Trauma-informed Care and Cultural Safety (Cultural Security, Clinical Yarning)',
+        icon: 'streamline:health-care-2-solid',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl pt-0 md:pt-0 lg:pt-0' }}
+  />
+
+  <Content
+    id='konica'
+    contentWidth='3/5'
+    columns={3}
+    isReversed
+    image={{
+      src: '~/assets/images/our-team-konica.jpg',
+      loading: 'lazy',
+      alt: 'Konica Kwok, BSc (Hons) OT, MEd,  B.C. Reg. OT',
+      height: 700,
+    }}
+  >
+    <Fragment slot='content' class='md:basis:2/3'>
+      <h2 class='text-[#8B3324] font-bold uppercase tracking-[0.4rem] font-special text-3xl md:text4xl mb-2'>
+        <span>Konica Kwok,</span><br />
+        <span class='font-medium tracking-normal text-xl md:text2xl'>BSc (Hons) OT, MEd, B.C. Reg. OT</span>
+      </h2>
+      <span
+        class='text-[#8B3324] font-medium uppercase tracking-[0.4rem] font-special text-xl md:text2xl inline-block mb-3'
+        >Occupational Therapist</span
+      >
+      <p>
+        Konica has over 15 years of experience as an OT and worked in various settings and populations, including
+        working with adults, the elderly, and children in hospitals and the community. After graduating from Hong Kong
+        Polytechnic University for OT, she pursued a Master's degree in Special Education for Autism at the University
+        of Birmingham.
+      </p>
+
+      <p>
+        Currently, Konica is on the RASP-list (Registry of Autism Service Providers) as a supervised OT. She brings
+        in-depth knowledge not limited to sensory processing, neurodiversity-affirming care, child development, and
+        physical modalities.
+      </p>
+
+      <p>
+        She is fluent in English, Cantonese, and Mandarin. Aside from being an OT, she is also a mother to 2 young kids
+        and enjoys spending time with her family.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    id='yvonne'
+    contentWidth='3/5'
+    columns={3}
+    image={{
+      src: '~/assets/images/our-team-yvonne.jpg',
+      loading: 'lazy',
+      alt: 'Yvonne Ho, MScOT, OT Reg. (Hong Kong)',
+      height: 700,
+    }}
+  >
+    <Fragment slot='content' class='md:basis:2/3'>
+      <h2 class='text-[#8B3324] font-bold uppercase tracking-[0.4rem] font-special text-3xl md:text4xl mb-2'>
+        <span>Yvonne Ho,</span><br />
+        <span class='font-medium tracking-normal text-xl md:text2xl'>MScOT, OT Reg. (Hong Kong)</span>
+      </h2>
+      <span
+        class='text-[#8B3324] font-medium uppercase tracking-[0.4rem] font-special text-xl md:text2xl inline-block mb-3'
+        >Occupational Therapy Assistant
+      </span>
+      <p>
+        Yvonne is a registered occupational therapist in Hong Kong with over 15 years of experience working with
+        children and families. She holds a Master of Science in Occupational Therapy from the Hong Kong Polytechnic
+        University and has specialized training in sensory integration and neurodevelopmental therapy.
+      </p>
+
+      <p>
+        Yvonne is passionate about supporting children with autism and other developmental disabilities through a
+        play-based and family-centred approach. Her warm and inviting style helps kids feel confident and engaged during
+        therapy. She emphasizes on building connections, enhancing the functioning of children and promoting the
+        well-being of families and caregivers.
+      </p>
+
+      <p>
+        Outside of work, Yvonne loves travelling, cooking Chinese dishes, and spending time with family and friends.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    id='alyssa'
+    contentWidth='3/5'
+    columns={3}
+    isReversed
+    image={{
+      src: '~/assets/images/our-team-alyssa.jpg',
+      loading: 'lazy',
+      alt: 'Alyssa Sih, Administrative Assistant',
+      height: 700,
+    }}
+  >
+    <Fragment slot='content' class='md:basis:2/3'>
+      <h2 class='text-[#8B3324] font-bold uppercase tracking-[0.4rem] font-special text-3xl md:text4xl mb-2'>
+        <span>Alyssa Sih</span>
+      </h2>
+      <span
+        class='text-[#8B3324] font-medium uppercase tracking-[0.4rem] font-special text-xl md:text2xl inline-block mb-3'
+        >Administrative Assistant</span
+      >
+      <p>
+        Alyssa is the administrative assistant at Seasons OT, responsible for backend duties, including billing,
+        scheduling, and liaising with funding contracts. She was an M.O.T. candidate, where she developed and further
+        refined an interest in assistive technology. She is enthusiastic about how technological innovation and access
+        can transform lives.
+      </p>
+
+      <p>During leisure time, Alyssa enjoys exploring different cuisines and cultures around the world.</p>
+    </Fragment>
+  </Content>
+</Layout>
