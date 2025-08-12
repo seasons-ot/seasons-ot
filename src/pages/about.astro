@@ -5,7 +5,6 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import Content from '~/components/widgets/Content.astro';
 import Headline from '~/components/ui/Headline.astro';
-import Steps from '~/components/widgets/Steps.astro';
 
 const metadata = {
   title: 'About us',
@@ -21,8 +20,8 @@ const metadata = {
       alt: 'People holding hands',
     }}
   >
-    <Fragment slot="title">
-      <span class="text-[#8B3324] uppercase tracking-[0.4rem]">About Us</span><br />
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem]'>About Us</span><br />
     </Fragment>
   </Hero>
 
@@ -60,13 +59,13 @@ const metadata = {
       alt: 'Skills that can be achieved via occupational therapy',
     }}
   >
-    <Fragment slot="title">
-      <span class="text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl"
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
         >What is Occupational Therapy?
       </span>
     </Fragment>
-    <Fragment slot="content">
-      <p class="text-left">
+    <Fragment slot='content'>
+      <p class='text-left'>
         Occupational Therapy (OT) is the art and science that helps individuals find meaning and purpose in their
         everyday activities.
       </p><p>Occupation' is defined as the activities that an individual, needs, wants and/or is expected to do.</p><p>
@@ -80,15 +79,15 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  <Fragment slot='bg'>
+    <div class='absolute inset-0 bg-blue-50 dark:bg-transparent'></div>
   </Fragment>
 
   <!-- Does my child need Occupational Therapy? ****************** -->
 
   <Features3
     columns={3}
-    defaultIcon="tabler:point-filled"
+    defaultIcon='tabler:point-filled'
     items={[
       {
         title: 'self-help skills',
@@ -119,13 +118,13 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">
-      <span class="text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl"
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
         >Does my child need Occupational Therapy?
       </span></Fragment
     >
 
-    <Fragment slot="subtitle">
+    <Fragment slot='subtitle'>
       <div>
         <span
           >If your child is struggling in any of the following areas, or is having difficulty keeping up with their
@@ -137,7 +136,7 @@ const metadata = {
   </Features3>
 
   <Headline>
-    <Fragment slot="subtitle">
+    <Fragment slot='subtitle'>
       <div>
         <span>To note, your child does not need a diagnosis or a doctor referral to receive OT services. </span>
       </div>
@@ -152,13 +151,13 @@ const metadata = {
   />
 
   <HeroText textOnly>
-    <Fragment slot="title">
-      <span class="text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl"
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
         >Our Practice Philosophy
       </span>
     </Fragment>
-    <Fragment slot="content">
-      <div class="text-left max-w-3xl m-auto">
+    <Fragment slot='content'>
+      <div class='text-left max-w-3xl m-auto'>
         <p>
           Our mission is to help children and youth thrive and become <b
             >more coordinated, calm, connected, and confident</b
@@ -193,13 +192,13 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <HeroText textOnly>
-    <Fragment slot="title">
-      <span class="text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl"
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
         >Meet our OT - Sharon Yeung (B.A, M.O.T, B.C. Reg. OT)
       </span>
     </Fragment>
-    <Fragment slot="content">
-      <div class="text-left max-w-3xl m-auto">
+    <Fragment slot='content'>
+      <div class='text-left max-w-3xl m-auto'>
         <p>
           Sharon is a registered Occupational Therapist in British Columbia, Canada and a member of the RASP-list
           (Registry of Autism Service Providers).
@@ -228,48 +227,4 @@ const metadata = {
       </div>
     </Fragment>
   </HeroText>
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Training & Qualifications:"
-    items={[
-      {
-        title: 'Sensory Processing and Integration',
-        description: `<ul><li>Therapeutic Listening®</li><li>Building Blocks of Sensory Integration</li><li>Wilbarger Brushing Protocol®</li><li>Astronaut Training Program®</li><li>Sensory modulation approaches to mental health interventions for adults and adolescents</li></ul>`,
-        icon: 'grommet-icons:assist-listening',
-      },
-      {
-        title: 'Mental Health',
-        description: `<ul><li>Anxiety Management for Children: Practical Strategies</li><li>Cognitive Behavioural Therapy (CBT): Level 1 for OT</li></ul>`,
-        icon: 'ri:mental-health-line',
-      },
-      {
-        title: 'Handwriting',
-        description: `<ul><li>Handwriting Without Tears®</li><li>Printing Like a Pro</li></ul>`,
-        icon: 'fluent-mdl2:handwriting',
-      },
-      {
-        title: 'Rhythmic Movement Training International (RMTi) Level 1 & 2',
-        icon: 'mdi:human-female-dance',
-      },
-      {
-        title: 'DIR 101: An Introduction to DIR® and DIRFloortime®',
-        icon: 'game-icons:relationship-bounds',
-      },
-      {
-        title:
-          'Emotional Freedom Technique (EFT)/Acupoint Mediated Neural Change Technique for Trauma, Relief and Resiliency',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Trauma-informed Care and Cultural Safety (Cultural Security, Clinical Yarning)',
-        icon: 'streamline:health-care-2-solid',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
 </Layout>
