@@ -5,7 +5,10 @@ import Button from '~/components/ui/Button.astro';
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
 ---
 
-<form name='contact' method='POST' data-netlify='true'>
+<form name='contact' method='POST' netlify-honeypot='bot-field' data-netlify-recaptcha='true' data-netlify='true'>
+  <p class='hidden'>
+    <label>Let me know what you're reaching out about <input name='bot-field' type='text' /></label>
+  </p>
   {
     inputs &&
       inputs.map(
@@ -67,6 +70,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
     )
   }
 
+  <div data-netlify-recaptcha='true'></div>
   {
     button && (
       <div class='mt-10 grid'>
