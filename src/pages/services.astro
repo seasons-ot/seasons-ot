@@ -3,6 +3,7 @@ import Content from '~/components/widgets/Content.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Image from '~/components/common/Image.astro';
 
 const metadata = {
   title: 'Services',
@@ -18,8 +19,8 @@ const metadata = {
       alt: 'People holding hands',
     }}
   >
-    <Fragment slot="title">
-      <span class="text-[#8B3324] uppercase tracking-[0.4rem]">Services</span>
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem]'>Services</span>
     </Fragment>
   </Hero>
 
@@ -32,13 +33,13 @@ const metadata = {
       alt: 'Child climbing ladder',
     }}
   >
-    <Fragment slot="title">
-      <span class="text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl"
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
         >Occupational Therapy Assessment
       </span>
     </Fragment>
-    <Fragment slot="content">
-      <p class="text-left">
+    <Fragment slot='content'>
+      <p class='text-left'>
         A holistic and comprehensive assessment includes parent interviews and questionnaires, standardized assessments
         and clinical observations of the child, and a written recommendations report.
       </p><p>
@@ -57,17 +58,17 @@ const metadata = {
 
   <Content
     image={{
-      src: '~/assets/images/child-climbing-ladder.jpg',
+      src: '~/assets/images/child-coloring.jpg',
       alt: 'Child climbing ladder',
     }}
   >
-    <Fragment slot="title">
-      <span class="text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl"
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
         >Occupational Therapy Treatment
       </span>
     </Fragment>
-    <Fragment slot="content">
-      <p class="text-left">
+    <Fragment slot='content'>
+      <p class='text-left'>
         Direct 1:1 OT sessions, with an OT or a supervised OTA (Occupational Therapy Assistant) in the child's home,
         community or preschool/daycare setting.
       </p><p>
@@ -80,20 +81,14 @@ const metadata = {
 
   <!-- Occupational Therapy Treatment Widget **************** -->
 
-  <Content
-    isReversed
-    image={{
-      src: '~/assets/images/children-playing-jenga.jpg',
-      alt: 'Children playing jenga',
-    }}
-  >
-    <Fragment slot="title">
-      <span class="text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl"
+  <HeroText textOnly>
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'
         >Parent Coaching and Consultation
       </span>
     </Fragment>
-    <Fragment slot="content">
-      <p class="text-left">
+    <Fragment slot='content'>
+      <p class='text-left'>
         Do you have burning questions or pain points about your child, or want to improve your relationship with your
         child? Is your child struggling with a new skill and becoming avoidant or frustrated when you try to teach them?
       </p><p>
@@ -102,7 +97,7 @@ const metadata = {
         development, practical therapeutic strategies and customized action plans.
       </p>
       <p>Examples of topics during Parent Coaching and Consultation:</p>
-      <ul>
+      <ul class='list-disc list-inside m-auto text-left w-fit'>
         <li>Anxiety/Stress management</li>
         <li>Sleep hygiene</li>
         <li>Toilet training</li>
@@ -112,43 +107,34 @@ const metadata = {
         <li>Parent-child relationship</li>
       </ul>
     </Fragment>
-  </Content>
+  </HeroText>
 
   <!-- service delivery
 
  Widget ******************* -->
 
-  <Hero
-    image={{
-      src: '~/assets/images/child-coloring.jpg',
-      alt: 'Child coloring',
-    }}
-  >
-    <!-- <Fragment slot='title'>
-      <span class='text-[#8B3324] uppercase tracking-[0.4rem]'>service delivery</span><br />
-    </Fragment>
-
+  <Hero>
     <Fragment slot='content'>
-      <div class='text-left max-w-3xl m-auto'>
-        <p class='text-left'>
-          <strong>In-person services</strong> are offered via community visits (at the child/youth's home, school/daycare,
-          and local playground/parks) to families living in the Greater Vancouver region.
-          <br /><strong>Teletherapy (online)</strong> is offered through a secure video or voice calling platform (based
-          on client preference).
-        </p><p>
-          Online OT can be just as effective and engaging as in-person sessions and helps to reduce travel costs as
-          well. Parent support for 1:1 online OT is recommended as a helping hand in session.
-        </p>
-      </div>
-    </Fragment> -->
+      <Image
+        class='mx-auto rounded-md w-full inline'
+        style='object-fit: contain;'
+        widths={[400, 768, 1024, 2040]}
+        sizes='(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px'
+        loading='eager'
+        width={1024}
+        height={576}
+        src={'~/assets/images/children-playing-jenga.jpg'}
+        alt={'Children Playing Jenga'}
+      />
+    </Fragment>
   </Hero>
 
   <HeroText textOnly>
-    <Fragment slot="title">
-      <span class="text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl">service delivery </span>
+    <Fragment slot='title'>
+      <span class='text-[#8B3324] uppercase tracking-[0.4rem] font-special text-3xl md:text4xl'>service delivery </span>
     </Fragment>
-    <Fragment slot="content">
-      <div class="text-left max-w-3xl m-auto">
+    <Fragment slot='content'>
+      <div class='text-left max-w-3xl m-auto'>
         <p>
           <strong>In-person services</strong> are offered via community visits (at the child/youth's home, school/daycare,
           and local playground/parks) to families living in the Greater Vancouver region.

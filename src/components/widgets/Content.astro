@@ -10,6 +10,7 @@ const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
+  contentWidth = '1/2',
   content = await Astro.slots.render('content'),
   callToAction,
   items = [],
@@ -22,6 +23,13 @@ const {
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+const widths = {
+  '1/2': 'md:w-1/2',
+  '3/5': 'md:w-3/5',
+  '1/4': 'md:w-1/4',
+  '2/5': 'md:w-2/5',
+};
 ---
 
 <WidgetWrapper
@@ -64,7 +72,7 @@ const {
         }
       </div>
 
-      <div class=`md:w-3/5 self-center`>
+      <div class=`${widths[contentWidth]} self-center`>
         {content && <div class='mb-12 text-lg dark:text-slate-400' set:html={content} />}
 
         {
