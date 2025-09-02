@@ -11,11 +11,11 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Connect with us" />
+  <HeroText tagline='Contact' title='Connect with us' />
 
   <ContactUs
-    id="form"
-    title="We are happy to answer any questions you may have!"
+    id='form'
+    title='We are happy to answer any questions you may have!'
     inputs={[
       {
         type: 'text',
@@ -36,11 +36,15 @@ const metadata = {
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
   >
-    <Fragment slot="subtitle">
-      If you're ready to join the waitlist, <a
-        href="https://seasonsot.therabyte.app/site/forms/intake-form/seasons-ot-intake-form"
-        target="_blank">register here.</a
-      ><br />To inquire for more information, please fill out the contact form below.
+    <Fragment slot='subtitle'>
+      <a
+        href='https://seasonsot.therabyte.app/site/forms/intake-form/seasons-ot-intake-form'
+        target='_blank'
+        class='register-link'
+      >
+        Register here</a
+      > if you're ready to join the waitlist.<br />To inquire for more information, please fill out the contact form
+      below.
     </Fragment>
   </ContactUs>
 </Layout>
