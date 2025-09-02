@@ -27,7 +27,12 @@ export interface Props {
 const { theme = 'light' } = Astro.props;
 ---
 
-<footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
+<footer
+  class:list={[
+    { dark: theme === 'dark' },
+    'relative border-t border-gray-200 dark:border-slate-800 not-prose py-6 md:py-8 lg:py-12',
+  ]}
+>
   <div class='relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300'>
     <Hero
       actions={[

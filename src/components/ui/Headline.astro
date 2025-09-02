@@ -10,7 +10,7 @@ const {
 } = Astro.props;
 
 const {
-  container: containerClass = 'max-w-3xl',
+  container: containerClass = 'max-w-4xl lg:max-w-5xl',
   title: titleClass = 'text-3xl md:text-4xl ',
   subtitle: subtitleClass = 'text-xl',
 } = classes;
@@ -20,7 +20,7 @@ const {
   (title || subtitle || tagline) && (
     <div class={twMerge('mb-8 md:mx-auto md:mb-12 text-center', containerClass)}>
       {tagline && (
-        <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase" set:html={tagline} />
+        <p class='text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase' set:html={tagline} />
       )}
       {title && (
         <h2
