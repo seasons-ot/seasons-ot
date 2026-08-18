@@ -24,7 +24,7 @@ export interface Props {
   theme?: string;
 }
 
-const { theme = 'light' } = Astro.props;
+const { theme = 'light', secondaryLinks = [] } = Astro.props;
 ---
 
 <footer
@@ -63,6 +63,18 @@ const { theme = 'light' } = Astro.props;
             Salish peoples - Squamish, Tsleil-Waututh and Musqueam Nations. We are thankful to be sharing this land for
             which we live, learn, and play.
           </p>
+          {
+            secondaryLinks.length > 0 && (
+              <p class='mt-4 text-sm'>
+                {secondaryLinks.map((link, index) => (
+                  <>
+                    {index > 0 && <span class='mx-2'>·</span>}
+                    <a class='underline hover:text-primary' href={link.href}>{link.text}</a>
+                  </>
+                ))}
+              </p>
+            )
+          }
         </div>
       </Fragment>
     </Hero>

@@ -28,7 +28,9 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({
+      filter: (page) => !['/homes/', '/landing/', '/pricing'].some((path) => page.includes(path)),
+    }),
     mdx(),
     icon({
       include: {

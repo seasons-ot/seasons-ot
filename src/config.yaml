@@ -1,6 +1,6 @@
 site:
   name: Seasons OT
-  site: 'https://astrowind.vercel.app'
+  site: 'https://seasonsot.com'
   base: '/'
   trailingSlash: false
 
@@ -11,20 +11,20 @@ metadata:
   title:
     default: Seasons OT
     template: '%s — Seasons OT'
-  description: 'Our mission is to help children and youth thrive and become more coordinated, calm, connected, and confident'
+  description: 'Play-based pediatric occupational therapy for families in the Greater Vancouver region. Our mission is to help children and youth thrive and become more coordinated, calm, connected, and confident.'
   robots:
     index: true
     follow: true
   openGraph:
     site_name: Seasons OT
     images:
-      - url: '~/assets/images/seasons-ot-logo.png'
+      - url: '~/assets/images/children-playing-jenga.jpg'
         width: 1200
-        height: 628
+        height: 630
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: ''
+    site: ''
     cardType: summary_large_image
 
 i18n:

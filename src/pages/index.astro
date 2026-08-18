@@ -5,17 +5,29 @@ import Hero from '~/components/widgets/Hero.astro';
 const metadata = {
   title: 'Seasons Occupational Therapy',
   ignoreTitleTemplate: true,
+  description:
+    'Play-based pediatric occupational therapy for families in the Greater Vancouver region. Our mission is to help children and youth thrive and become more coordinated, calm, connected, and confident.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero image={{ src: '~/assets/images/seasons-ot-logo.png', alt: 'Seasons Occupational Therapy Logo' }}>
+  <Hero
+    image={{ src: '~/assets/images/seasons-ot-logo.png', alt: 'Seasons Occupational Therapy Logo' }}
+    actions={[
+      { variant: 'secondary', text: 'Services', href: '/services' },
+      { variant: 'primary', text: 'Connect', href: '/contact' },
+    ]}
+  >
     <Fragment slot="title">
       <span class="text-[#8B3324] uppercase tracking-wider font-bold">Seasons</span><br /><span
         class="uppercase text-[#543710] tracking-wider text-xl md:text-2xl font-bold">Occupational Therapy</span
       >
+    </Fragment>
+    <Fragment slot="subtitle">
+      Helping children and youth thrive — more coordinated, calm, connected, and confident. Family-centered, play-based
+      occupational therapy in the Greater Vancouver region.
     </Fragment>
   </Hero>
 </Layout>

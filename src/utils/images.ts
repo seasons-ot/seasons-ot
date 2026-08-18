@@ -73,7 +73,7 @@ export const adaptOpenGraphImages = async (
 
         const _image = await getImage({
           src: resolvedImage,
-          alt: 'Placeholder alt',
+          alt: 'Seasons Occupational Therapy',
           width: image?.width || defaultWidth,
           height: image?.height || defaultHeight,
         });

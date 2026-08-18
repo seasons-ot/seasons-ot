@@ -1,0 +1,88 @@
+---
+import { SITE, METADATA } from 'astrowind:config';
+import ogImage from '~/assets/images/children-playing-jenga.jpg';
+
+const siteUrl = SITE.site || 'https://seasonsot.com';
+const description =
+  METADATA?.description ||
+  'Play-based pediatric occupational therapy for children and youth in the Greater Vancouver region.';
+const imageUrl = new URL(ogImage.src, siteUrl).href;
+
+const business = {
+  '@type': ['MedicalBusiness', 'LocalBusiness'],
+  '@id': `${siteUrl}/#practice`,
+  name: 'Seasons Occupational Therapy',
+  alternateName: 'Seasons OT',
+  url: siteUrl,
+  email: 'hello@seasonsot.com',
+  telephone: '+1-604-304-1315',
+  description,
+  image: imageUrl,
+  hasMap: 'https://maps.app.goo.gl/hcnJ6N6UPKMuVLws9',
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Greater Vancouver',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Vancouver',
+    addressRegion: 'BC',
+    addressCountry: 'CA',
+  },
+  availableService: [
+    { '@type': 'Service', name: 'Occupational Therapy Assessment' },
+    { '@type': 'Service', name: 'Occupational Therapy Treatment' },
+    { '@type': 'Service', name: 'Parent Coaching and Consultation' },
+    { '@type': 'Service', name: 'Teletherapy' },
+  ],
+  knowsAbout: [
+    'Pediatric occupational therapy',
+    'Sensory processing',
+    'Fine motor skills',
+    'Gross motor skills',
+    'Self-regulation',
+    'Executive functioning',
+    'Play-based therapy',
+  ],
+  employee: [
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/our-team#sharon-yeung`,
+      name: 'Sharon Yeung',
+      jobTitle: 'Occupational Therapist & Clinic Owner',
+      honorificSuffix: 'B.A, M.O.T, B.C. Reg. OT',
+      url: `${siteUrl}/our-team#sharon-yeung`,
+    },
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/our-team#konica`,
+      name: 'Konica Kwok',
+      jobTitle: 'Occupational Therapist',
+      honorificSuffix: 'BSc (Hons) OT, MEd, B.C. Reg. OT',
+      url: `${siteUrl}/our-team#konica`,
+    },
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/our-team#yvonne`,
+      name: 'Yvonne Ho',
+      jobTitle: 'Occupational Therapy Assistant',
+      honorificSuffix: 'MScOT, OT Reg. (Hong Kong)',
+      url: `${siteUrl}/our-team#yvonne`,
+    },
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/our-team#alyssa`,
+      name: 'Alyssa Sih',
+      jobTitle: 'Administrative Assistant',
+      url: `${siteUrl}/our-team#alyssa`,
+    },
+  ],
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [business],
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
