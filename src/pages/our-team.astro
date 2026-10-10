@@ -8,7 +8,7 @@ import Steps from '~/components/widgets/Steps.astro';
 const metadata = {
   title: 'Our Team | Pediatric Occupational Therapists',
   description:
-    'Meet Sharon Yeung, B.C. Reg. OT and clinic owner, with Konica Kwok, Yvonne Ho, and Alyssa Sih. The Seasons OT team provides play-based pediatric occupational therapy for children and families in Greater Vancouver.',
+    'Meet Sharon Yeung, B.C. Reg. OT and clinic owner, with Konica Kwok, Yvonne Ho, Miki Tsui, and Alyssa Sih. The Seasons OT team provides play-based pediatric occupational therapy for children and families in Greater Vancouver.',
 };
 ---
 
@@ -190,9 +190,44 @@ const metadata = {
   </Profile>
 
   <Profile
-    id='alyssa'
+    id='miki'
     contentWidth='3/5'
     isReversed
+    image={{
+      src: '~/assets/images/our-team-miki.jpg',
+      loading: 'lazy',
+      alt: 'Miki Tsui, B.Kin',
+      height: 700,
+    }}
+  >
+    <Fragment slot='content' class='md:basis:2/3'>
+      <h2 class='heading-section mb-2'>
+        <span>Miki Tsui,</span><br />
+        <span class='profile-titles'>B.Kin</span>
+      </h2>
+      <span class='profile-role mb-3'>Occupational Therapy Assistant</span>
+      <p>
+        Miki holds a Bachelor of Kinesiology from the University of British Columbia and brings a diverse background
+        spanning pediatric therapy, adult community health, senior care, hospital environments, and outpatient clinics.
+        Her strengths-based approach is rooted in empathy and creativity, meeting every child and family where they are
+        to support meaningful learning, development and functional growth.
+      </p>
+
+      <p>
+        She prioritizes building genuine and trusting relationships, and creating safe and welcoming spaces that
+        empower children and families to build confidence and independence.
+      </p>
+
+      <p>
+        Miki is fluent in English and Japanese. In her spare time, she enjoys spending time with her friends and
+        family, swimming, playing with her dog, and reading.
+      </p>
+    </Fragment>
+  </Profile>
+
+  <Profile
+    id='alyssa'
+    contentWidth='3/5'
     image={{
       src: '~/assets/images/our-team-alyssa.jpg',
       loading: 'lazy',
